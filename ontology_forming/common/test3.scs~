@@ -5,7 +5,6 @@ TS_agents_of_forming_ontologies3
 
 => nrel_ontology: fake_terminological_ontology;
 => nrel_ontology: TS_agents_of_forming_ontologies2 (* <- logical_ontology;; *);
-=> nrel_ontology: fake_set_theoretic_ontology;
 
 -> rrel_explored_relation:
 	nrel_ts_agents_of_forming_ontologies;

@@ -1,0 +1,77 @@
+nrel_ts_agents_of_forming_ontologies => nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination: 
+		{
+			... (* <= nrel_first_domain: nrel_ts_agents_of_forming_ontologies;; *);
+			... (* <= nrel_second_domain: nrel_ts_agents_of_forming_ontologies;; *)
+		};;
+	*);;
+	
+
+
+rrel_ts_agents_of_forming_ontologies => nrel_first_domain: ...;;
+
+concept_ts_agents_of_forming_ontologies1
+	=> nrel_subdividing:
+	{
+		...;
+		...;
+		...
+	};;
+
+concept_ts_agents_of_forming_ontologies1
+	=> nrel_inclusion: concept_ts_agents_of_forming_ontologies2;;
+
+concept_ts_agents_of_forming_ontologies2
+	=> nrel_primary_elements_class_private_subject_domain: concept_ts_agents_of_forming_ontologies3;;
+
+concept_ts_agents_of_forming_ontologies2
+	=> nrel_strict_inclusion: concept_ts_agents_of_forming_ontologies3;;
+
+concept_ts_agents_of_forming_ontologies3
+	=> nrel_private_action: ...;;
+
+concept_ts_agents_of_forming_ontologies3
+	<= nrel_section_decomposition: {
+		...;
+		...;
+		...;
+		...
+	};;
+
+concept_ts_agents_of_forming_ontologies2
+	=> nrel_intersection: {
+		concept_ts_agents_of_forming_ontologies1;
+		...;
+		...
+	};;
+
+
+(... => ...) => nrel_sets_difference: concept_ts_agents_of_forming_ontologies3;;
+
+
+concept_ts_agents_of_forming_ontologies1 <= nrel_combination: {
+	...;
+	...;
+	...
+};;
+
+concept_ts_agents_of_forming_ontologies3 -> rrel_example: ...;;
+
+concept_ts_agents_of_forming_ontologies1_other_sd => nrel_first_domain: concept_ts_agents_of_forming_ontologies1;;
+
+concept_ts_agents_of_forming_ontologies2_other_sd => nrel_definitional_domain: concept_ts_agents_of_forming_ontologies1;;
+
+concept_ts_agents_of_forming_ontologies3_other_sd => nrel_definitional_domain: ...
+	(*
+	<= nrel_combination:
+		{
+			concept_ts_agents_of_forming_ontologies1;
+			concept_ts_agents_of_forming_ontologies2;
+			concept_ts_agents_of_forming_ontologies3	
+		};;
+	*);;
+
+concept_ts_agents_of_forming_ontologies3_other_sd => nrel_ts_agents_of_forming_ontologies: concept_ts_agents_of_forming_ontologies3;;
+
