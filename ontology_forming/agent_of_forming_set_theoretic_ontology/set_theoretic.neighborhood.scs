@@ -1,51 +1,41 @@
-nrel_ts_agents_of_forming_ontologies => nrel_first_domain: ...;;
+nrel_ts_agents_of_forming_ontologies <- relation; binary_relation;;
+rrel_ts_agents_of_forming_ontologies <- relation; role_relation;;
 
-concept_ts_agents_of_forming_ontologies1
-	=> nrel_subdividing:
+concept_ts_agents_of_forming_ontologies1 => nrel_inclusion: concept_ts_agents_of_forming_ontologies2;;
+concept_ts_agents_of_forming_ontologies4 => nrel_strict_inclusion: concept_ts_agents_of_forming_ontologies1;;
+
+nrel_ts_agents_of_forming_ontologies => nrel_first_domain:
+	concept_ts_agents_of_forming_ontologies1;;
+
+nrel_ts_agents_of_forming_ontologies => nrel_second_domain:
+	concept_ts_agents_of_forming_ontologies2;;
+
+nrel_ts_agents_of_forming_ontologies => nrel_definitional_domain: ...
+	(*
+	<= nrel_combination: {
+		...;
+		...
+	};;
+	*);;
+
+concept_ts_agents_of_forming_ontologies3 -> rrel_example: ...;;
+
+concept_ts_agents_of_forming_ontologies4 <= nrel_sets_difference: (... => ...);;
+
+... <= nrel_sets_difference: (concept_ts_agents_of_forming_ontologies1 => ...);;
+
+concept_ts_agents_of_forming_ontologies1 <= nrel_combination:
 	{
 		...;
 		...;
 		...
 	};;
 
-concept_ts_agents_of_forming_ontologies1
-	=> nrel_inclusion: concept_ts_agents_of_forming_ontologies2;;
-
-concept_ts_agents_of_forming_ontologies2
-	=> nrel_strict_inclusion: concept_ts_agents_of_forming_ontologies3;;
-
-concept_ts_agents_of_forming_ontologies2
-	=> nrel_intersection: {
-		concept_ts_agents_of_forming_ontologies1;
+concept_ts_agents_of_forming_ontologies2 <= nrel_intersection:
+	{
+		...;
 		...;
 		...
 	};;
 
-
-(... => ...) => nrel_sets_difference: concept_ts_agents_of_forming_ontologies3;;
-
-
-concept_ts_agents_of_forming_ontologies1 <= nrel_combination: {
-	...;
-	...;
-	...
-};;
-
-concept_ts_agents_of_forming_ontologies3 -> rrel_example: ...;;
-
-concept_ts_agents_of_forming_ontologies1_other_sd => nrel_first_domain: concept_ts_agents_of_forming_ontologies1;;
-
-concept_ts_agents_of_forming_ontologies2_other_sd => nrel_definitional_domain: concept_ts_agents_of_forming_ontologies1;;
-
-concept_ts_agents_of_forming_ontologies3_other_sd => nrel_definitional_domain: ...
-	(*
-	<= nrel_combination:
-		{
-			concept_ts_agents_of_forming_ontologies1;
-			concept_ts_agents_of_forming_ontologies2;
-			concept_ts_agents_of_forming_ontologies3	
-		};;
-	*);;
-
-concept_ts_agents_of_forming_ontologies3_other_sd => nrel_ts_agents_of_forming_ontologies: concept_ts_agents_of_forming_ontologies3;;
-
+concept_ts_agents_of_forming_ontologies2 -> ...; ...; ...;;
